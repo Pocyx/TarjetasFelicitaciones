@@ -246,20 +246,10 @@ session_start();
                     </form>
                 </section>
                 <div id="contenedor77">
-
-                <?php
-                    $usuarios = "SELECT * FROM usuarios WHERE name = '" . $_SESSION['usuario'] . "'";
-                    $resultadoUsuario = $con->query($usuarios);
-                    $objUsuario = $resultadoUsuario->fetch_object();
-                    if ($objUsuario->cargo == 1){
-                        require_once("tarjeta_lista_tabla.php");
-                        require_once("lista_cabecera.php");
-                    }    
-                        
-                ?>
-
+                    
+                    <?php include "tarjeta_lista_tabla.php" ?>
                 </div>
-           
+                    <?php include "lista_cabecera.php" ?>
                 
 
 

@@ -53,7 +53,7 @@
                     <form enctype="multipart/form-data"   action="misTarjetas.php?foto" method="POST">
                         <input type="file"  id="archivo" name="archivo"/>
                         <input type="hidden" name="MAX_FILE_SIZE" value="300000" />
-                        <button class="botones">Perfil</button>
+                        <button class="botones">Cambiar foto perfil</button>
                     </form>
                     <?php ?>
                 </div>
@@ -120,21 +120,9 @@
             </div>
         </div>
         <div class="pie item">
-            <div>
+         
 
-            </div>
-
-            <div id="contenedor2">
-                <div id="controles">
-                    <button id="adornar" class="botones">Poner Adorno auto</button>
-                    <button id="adornar2" class="botones">Poner Adorno</button>
-                    <button id="mover" class="botones">Mover Árbol</button>
-                </div>
-
-                <div id="juego">
-                    <img id="arbol" src="tree.png">
-                </div>
-            </div>
+            
 
         </div>
     </body>
