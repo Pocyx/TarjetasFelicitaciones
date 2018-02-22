@@ -1,0 +1,395 @@
+
+#cabeza{
+    display: flex;
+    justify-content: space-around;
+}
+#contenedor{
+    background: rgba(0,0,0,.5);
+    position: relative;
+    /*margin: 0 auto;
+    padding: 5px;*/
+    /* width: 900px;
+     height: 550px;*/
+    display: flex;
+    justify-content: center;/*posicion del width*/
+   /* align-items: center;/*posicion del heidth*/
+    border-radius: 2%;
+}
+#controles{
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.botones{
+
+    font: italic bold 15px arial, sans-serif;
+    height: 50px;
+    color: beige;
+    background: rgba(0,5,0,.5);
+    border-radius: 15%;
+}
+.cerrar{
+    font: italic bold 15px arial, sans-serif;
+    height: 50px;
+    color: beige;
+    background: rgba(0,1,8,.5);
+    border-radius: 30%;
+}
+#centro{
+
+    display: flex;
+    flex-direction: column;
+
+
+}
+#comenzar {
+    float: left;
+    margin-left: 25px;
+    display: block;
+}
+#arbol{
+    /*  background: url(tree.png);*/
+    /*  background: rgba(0,0,0,.5);*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    animation-name: animacionCubo;
+    animation-duration: .2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-play-state:paused;/*play o pause*/
+}
+#juego{
+    background: rgba(0,0,0,.0);
+    position: relative;
+    width: 400px;
+    height: 381px;
+    margin: 0 auto;
+    top: 10px;
+
+    overflow: hidden;
+}
+.bolita{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: 0px;
+    z-index:3;
+    left: 300px;
+    background-size: 100%;
+
+}
+
+#bolaPrueba{
+    background: blue;
+    top: -30px;/*334px*/
+    left: 47px;/*47px*/
+}
+#arrastrar1 { 
+    position:absolute;
+    top:45px;
+    left:45px;
+    background-size: 100%;
+    width: 70px; 
+    height: 70px; 
+    background-repeat: no-repeat;
+    background-image: url(imagen/estrella.png) ;
+    z-index: 5;
+
+}
+#arrastrar2 { 
+    position:absolute;
+    top:45px;
+    left:150px;
+    background-size: 100%;
+    width: 70px; 
+    height: 70px; 
+    background-repeat: no-repeat;
+    background-image: url(imagen/estrella2.png) ;
+    z-index: 5;
+
+}
+#arrastrar3 { 
+    position:absolute;
+    top:45px;
+    left:275px;
+    background-size: 100%;
+    width: 70px; 
+    height: 70px; 
+    background-repeat: no-repeat;
+    background-image: url(imagen/estrella3.png) ;
+    z-index: 5;
+
+}
+
+
+@font-face {
+    font-family: "FontAwesome1";
+    src: url("fuente.otf");
+}
+
+@font-face {
+    font-family: "FontAwesome2";
+    src: url("fuentefrio.ttf");
+}
+@font-face {
+    font-family: "FontAwesome3";
+    src: url("fuentenavi/MerryChristmasFlake.ttf");
+}
+#mensaje{
+    max-width: 750px;
+    background: rgba(250,244,227,.2);
+    font-family: "FontAwesome3";
+    font-size: 30px;
+    text-shadow: #ffffff 2px 2px 3px;
+}
+
+body{
+    /*  font: italic bold 24px arial, sans-serif;
+      background-color: sienna;*/
+
+    font-family: "FontAwesome1";
+    font-size: 25px;
+    text-shadow: rgb(20, 6, 6) 2px 2px 3px;
+
+    background: url(imagen/fondo.jpg) ;
+
+    background-attachment: fixed ;
+}
+.contenedor{
+
+    /*transforma la #cuadricula en un contenedor grid:*/
+    display: grid;
+    /*esto genera 3 columnas iguales cuya anchura es 1fr */
+    grid-template-columns:0.5fr 4fr;/*si pongo otro fr añade otra columna*/
+    /*establece el espaciado entre los ítems del grid*/
+    grid-gap:1em;/*1rem no se anida con el abuelo, distancia entre elementos*/
+    /*border: 1px dashed #777;*/
+
+    background: url(imagen/nieve2.gif) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.item{
+    padding: 1em;
+    /* border: 1px solid #000;*/
+    box-shadow: -5px -5px 5px 0px black;
+    border-radius: 10px;
+    background-color: var(--color);
+}
+.cabeza{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(6, 10, 147 ,0.3);
+    box-shadow: -5px -5px 5px 0px black;
+    text-align: center;
+    overflow: hidden;
+}
+h3{
+    color: antiquewhite;
+
+}  
+#titulo{
+    font-family: "FontAwesome2";
+    font-size: 30px;
+    text-shadow: black 2px 2px 3px;
+    height: 3em;
+
+    position: relative;
+    background-position: 0px -50px;
+    background: url(imagen/lazo4.png) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    z-index: 5;
+}
+#fijos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+#fijo{
+    align-content: flex-start;
+    text-align: center;
+    color: beige;
+    background: url(imagen/sesion.png) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 50%;
+    padding: 1em;
+    height: 50px;
+    position: fixed;
+    z-index: 5;
+}
+.articulo{
+    
+    background: rgba(250,244,227,.2);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    /*transforma la #cuadricula en un contenedor grid:*/
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;/*no va*/
+    padding: 25px;
+
+}
+.articulo .tarjeta{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+
+    background-image: url(imagen/papel2.jpg) ; 
+    background-repeat: repeat-y;
+    background-size: 100%;
+
+
+    margin: 25px;
+}
+.articulo .tarjeta div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+
+    background-position: 0px -52px;
+    background-image: url(imagen/lazo2.png) ; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    margin: 20px;
+}
+.articulo .tarjetacol{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    background: rgba(6, 10, 147 ,0.2);
+    /*background-image: url(imagen/papel2.jpg) ; */
+    background-repeat: repeat-y;
+    background-size: 100%;
+    border-radius: 20%;
+    margin: 15px;
+}
+ #consumidos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10%;  
+
+    background: #c40003;
+    
+}
+
+ #restantes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10%;  
+
+    background: #63FF84;
+   
+}
+/*---------------------*/
+#total{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+  
+    border-radius: 10%;
+
+    background:rgb(23, 23, 112);
+    
+}
+
+
+
+/*---------------------*/
+.articulo .tarjetacol #megusta2{
+
+    height: 40px;
+    width: 40px;
+    background-image: url(imagen/megusta2.png) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.articulo .tarjeta #megusta{
+    height: 40px;
+    width: 40px;
+    background-image: url(imagen/megusta2.png) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.cora{
+    height: 50px;
+    width: 50px;
+    background-position: 3px 6px;
+    background-image: url(imagen/megusta2.png) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.navegador{
+    background: rgba(6, 10, 147 ,0.3);
+
+
+}
+.navegador div{
+    /*border: 1px solid #000;*/
+}
+.aparte{
+    background: blue;
+}
+.pie{
+    background-image: url(imagen/lazopie.png) ; 
+    background-repeat: no-repeat;
+    background-size: 27%;
+}
+#modificarbtn{
+    display: flex;
+    justify-content: space-around;
+}
+#capaoculta{
+    
+}
+
+
+
+@keyframes animacionCubo{
+    /*Indicamos que salimos de la posición 0*/
+    from{
+        left: -2px;
+    }
+    /*Indicamos que al final la posición debe ser 350*/
+    to{
+        left: 2px;
+    }
+
+
+
+}
+
+
+
+
+
+

@@ -1,0 +1,119 @@
+/*tablet pc*/
+@media (min-width: 768px) {
+   
+    .contenedor{
+        
+        /*transforma la #cuadricula en un contenedor grid:*/
+        display: grid;
+        /*esto genera 3 columnas iguales cuya anchura es 1fr */
+        grid-template-columns:0.5fr 4fr;/*si pongo otro fr añade otra columna*/
+        /*establece el espaciado entre los ítems del grid*/
+        grid-gap:1em;/*1rem no se anida con el abuelo, distancia entre elementos*/
+        /*border: 1px dashed #777;*/
+        
+        background: url(imagen/nieve2.gif) ;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    
+   
+    
+     
+ 
+
+}
+
+
+/*movil*/
+@media (max-width: 768px) {
+    .contenedor{
+        /*transforma la #cuadricula en un contenedor grid:*/
+        display: grid;
+        /*esto genera 3 columnas iguales cuya anchura es 1fr */
+        grid-template-columns:1fr;/*si pongo otro fr añade otra columna*/
+        /*establece el espaciado entre los ítems del grid*/
+        grid-gap:1em;/*1rem no se anida con el abuelo, distancia entre elementos*/
+        border: 1px dashed #777;
+    }
+    .item{
+        padding: 1em;
+        border: 1px solid #000;
+        border-radius: 10px;
+        background-color: var(--color);
+    }
+    .cabeza{
+        text-align: center;
+        background: rgba(0,0,0,.5);
+    }
+    .articulo{
+        background: #124678;  
+        /*transforma la #cuadricula en un contenedor grid:*/
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;/*no va*/
+        padding: 25px;
+
+    }
+    .articulo .tarjeta{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+
+        border: 1px solid #000;
+        margin: 25px;
+    }
+    .articulo .tarjeta div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+
+        border: 1px solid #000;
+        margin: 20px;
+    }
+    .articulo .tarjetacol{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+
+        border: 1px solid #000;
+        margin: 25px;
+    }
+    .articulo .tarjetacol div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+
+        border: 1px solid #000;
+        margin: 25px;
+    }
+    .articulo .tarjetacol #megusta2{
+
+        height: 20px;
+        width: 20px;
+        background-image: url(imagen/megusta2.png) ;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    #megusta{
+        height: 20px;
+        width: 20px;
+        background-image: url(imagen/megusta2.png) ;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    
+
+
+
+
+}
