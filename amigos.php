@@ -80,7 +80,17 @@ require_once("conexion.php");
         <div  class="cabeza bg-dark">
             <div id="titulo">
                 <h3>
-                    Consumo de datos     
+                <?php
+                require_once("conexion.php");
+
+                $publicado = "SELECT * FROM usuarios WHERE name = '" . $_SESSION['usuario'] . "'";
+                $resultPublicado = $con->query($publicado);
+                $obj = $resultPublicado->fetch_object();
+                if ($obj->cargo == 1)
+                    echo 'Administración de usuarios';
+                else
+                    echo 'Amigos';
+                ?>    
                 </h3>
             </div>
         </div>
@@ -89,13 +99,9 @@ require_once("conexion.php");
                 <div style="text-align: center"><?= $_SESSION['usuario']; ?> </div>
                 <div class="articulo">
 
-                    Datos:
+                    Mensajes:
                     <?php
-                    require_once("conexion.php");
-
-                    $publicado = "SELECT * FROM usuarios WHERE name = '" . $_SESSION['usuario'] . "'";
-                    $resultPublicado = $con->query($publicado);
-                    $obj = $resultPublicado->fetch_object();
+                    
 
                     echo $obj->datosConsumidos;
 
@@ -116,7 +122,7 @@ require_once("conexion.php");
             </div>
         </div>
         <div class="pie item">
-            <p>&copy; 2018 Consumodedatos.com<p>
+            <p>&copy; 2018 feliceslosgatos.com<p>
         </div>
     </body>
 </html>
@@ -130,8 +136,8 @@ require_once("conexion.php");
 
     var consumoData = {
         labels: [
-            "Restantes",
-            "Consumidos"
+            "Enviados",
+            "Recividos"
         ],
         datasets: [
             {

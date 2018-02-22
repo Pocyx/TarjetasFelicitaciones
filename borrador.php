@@ -229,19 +229,19 @@ session_start();
             }
             ?>
             <div class="articulo item">
-                <section  style="background-color: greenyellow;  color: black; max-width: 100%">
+                <section  style="background-color: greenyellow;  color: black; max-width: 40%">
                     <form class="cmxform" id="commentForm" method="post" action="borrador.php" name="graba">
 
                         <p>
-                            <label for="fecha_envio">Fecha de envio:
+                            <label for="fecha_envio">Fecha de envio:</br>
                                 <input type="text" id="fecha_envio" value="" name="fecha_envio"/>
                             </label> 
                         </p>
 
-                        <label for="vtitulo">Título:</label>
-                        <input style="max-width: 80% "type="text" id="submit vtitulo" name="vtitulo" size="50" required>
-                        <label for="vtitulo">Felicitación:</label>
-                        <textarea id="submit" name="texto" rows="10" cols="40" style=" padding: 7px 6px; max-width: 100%; height: 150px; border: 1px solid #4b8f29; resize: vertical; box-shadow: 0 0 0 3px #3e7327; margin: 5px 0;"></textarea>
+                        <label for="vtitulo">Título:</label></br>
+                        <input style="max-width: 60% "type="text" id="submit vtitulo" name="vtitulo" size="50" required></br>
+                        <label for="vtitulo">Felicitación:</label></br>
+                        <textarea id="submit" name="texto" rows="10" cols="40" style=" padding: 7px 6px; max-width: 50%; height: 150px; border: 1px solid #4b8f29; resize: vertical; box-shadow: 0 0 0 3px #3e7327; margin: 5px 0;"></textarea></br>
                         <input type="submit" name="submit" id="submit" value="Guardar"/>       
                     </form>
                 </section>
@@ -260,7 +260,14 @@ session_start();
 
                 </div>
            
-                
+                <?php
+                   
+                    if ($objUsuario->cargo == 1){
+               
+                        require_once("lista_cabecera.php");
+                    }    
+                        
+                ?>
 
 
                 <?php

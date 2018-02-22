@@ -28,8 +28,8 @@ require_once("conexion.php");
                 <tr >
                 <th scope="col"><kbd>ID</kbd></th>
                 <th scope="col">Nombre</th>
-                <th scope="col">Datos Restantes</th>
-                <th scope="col">Datos Consumidos</th>
+                <th scope="col">Mensajes enviados</th>
+                <th scope="col">Mensajes recividos</th>
                 </tr>
             </thead>
 
