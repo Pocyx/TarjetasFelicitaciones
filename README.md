@@ -1,4 +1,4 @@
 # TarjetasFelicitaciones
-Proyecto web en el que podrás crear tarjetas de felicitaciones y programar una fecha para mandarsela a un amigo.
+Proyecto web en el que podrás crear tarjetas de felicitaciones y programar una fecha para mandarla a un amigo.
 
 
