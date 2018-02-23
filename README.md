@@ -15,4 +15,6 @@ Proyecto web en el que podrás crear tarjetas de felicitaciones y programar una 
   <img src="CapturasProyecto/5.png" width="350"/>
   <h2>Administración de usuarios y mensajes</h2>
   <img src="CapturasProyecto/6.png" width="350"/>
+  <h2>Modelo entidad-relación (actual, no definitivo)</h2>
+  <img src="CapturasProyecto/modelo_entidad-relacion.png" width="350"/>
 </p>
